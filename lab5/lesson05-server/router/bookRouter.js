@@ -7,7 +7,7 @@ router.get('/',bookController.getAllBook)
 
 router.get('/:bookId',bookController.getBookById)
 
-router.post('/',bookController.createBook)
+router.post('/',bookController.save)
 
 router.put('/:bookId',bookController.updateBook)
 router.delete('/:bookId',bookController.deleteBook)
