@@ -15,7 +15,7 @@ exports.save = (req, res, next) => {
 
 exports.updateBook = (req, res, next) => {
     const book = req.body
-    const updatedBook = new BookC(req.params.bookId, book.title, book.ISBN, book.publishedDate, book.author).updateBook()
+    let updatedBook = new BookC(req.params.bookId, book.title, book.ISBN, book.publishedDate, book.author).updateBook()
     res.status(200).json(updatedBook)
 }
 exports.deleteBook = (req, res, next) => {

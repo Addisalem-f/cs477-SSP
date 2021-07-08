@@ -9,9 +9,6 @@
 </head>
 
 <body>
-
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Book Store</a>
@@ -29,7 +26,24 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" id="login-div">
+
+    <form id="login-form">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      <button type="submit" class="btn btn-primary" id="login-btn">Submit</button>
+    </form>
+    <div id="error-msg" class="warning"></div>
+
+  </div>
+
+  <div class="container" id="book-container">
     <h1>Book List</h1>
     <table class="table">
       <thead>

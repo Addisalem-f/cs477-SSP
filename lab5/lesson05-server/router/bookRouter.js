@@ -1,15 +1,16 @@
-const express=require("express")
-const bookController=require("../controller/bookController")
-const router=express.Router()
+const express = require("express")
+const bookController = require("../controller/bookController")
+const BookAdminAutho = require("../controller/userController")
+const router = express.Router()
 
 
-router.get('/',bookController.getAllBook)
+router.get('/', bookController.getAllBook)
 
-router.get('/:bookId',bookController.getBookById)
+router.get('/:bookId', bookController.getBookById)
 
-router.post('/',bookController.save)
+router.post('/', BookAdminAutho.AuthorizationAdmin, bookController.save)
 
-router.put('/:bookId',bookController.updateBook)
-router.delete('/:bookId',bookController.deleteBook)
+router.put('/:bookId', BookAdminAutho.AuthorizationAdmin, bookController.updateBook)
+router.delete('/:bookId', BookAdminAutho.AuthorizationAdmin, bookController.deleteBook)
 
-module.exports=router
+module.exports = router

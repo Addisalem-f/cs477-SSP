@@ -1,4 +1,4 @@
-const books = []
+let books = []
 
 module.exports = class Book {
 
